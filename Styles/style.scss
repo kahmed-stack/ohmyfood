@@ -1,0 +1,229 @@
+@mixin button-default {
+    border-radius: 1.5625rem;
+    background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: $White;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+  }
+
+  @mixin button-hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  }
+
+    $Grey : #353535;
+    $Grey2 : #EAEAEA;
+    $Grey3 : #7E7E7E;
+    $White : #fff;
+    $Black : #000;
+    $Background : #F6F6F6;
+    $Primary : #9356DC;
+    $Green : #99E2D0;
+    $Green-Font : #008766;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+
+    /* Header and Location Bar */
+
+header {
+    background-color: $White;
+    text-align: center;
+    padding: 20px;
+
+img.logo {
+      width: 175px;
+      height: auto;
+    }
+}
+.location-bar {
+    background-color: $Grey2;
+    padding: 20px;
+    text-align: center;
+
+    i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: $Grey;
+    }
+
+    .location-name {
+      color: $Grey;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+
+    /* Hero Section */
+
+  .hero-section {
+    background-color: $Background;
+    text-align: center;
+    padding: 40px;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $Black;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 300;
+      color: $Grey;
+      margin-bottom: 30px;
+    }
+
+    button {
+    padding: 0.81rem 1.17rem;
+    @include button-default;
+    &:hover {
+        @include button-hover;
+        }
+    }
+  }
+
+    /* How it works Section */
+
+.how-it-works-section {
+    text-align: left;
+    padding: 2rem;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $Black;
+      margin-bottom: 30px;
+    }
+
+    .rectangle-container {
+      position: relative;
+      background: $Background;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      border-radius: 1.25rem;
+      margin-bottom: 30px;
+      display: flex;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2rem;
+        height: 2rem;
+        background: $Primary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.88638rem;
+        font-weight: 500;
+        color: $White;
+      }
+
+      i {
+        font-size: 25px;
+        color: $Grey3;
+        padding: 10px 20px 0px 20px;
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $Black;
+        margin-top: 10px;
+      }
+    }
+    .step-1::before {
+        content: '1';
+      }
+
+      .step-2::before {
+        content: '2';
+      }
+
+      .step-3::before {
+        content: '3';
+      }
+  }
+
+/* Restaurant Section */
+
+.featured-section {
+    background: $Background;
+    padding: 20px;
+
+    h1 {
+      font-size: 36px;
+      color: $Black;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      position: relative;
+      background: $White;
+      border-radius: 0.9375rem;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+      margin-bottom: 20px;
+      text-align: left;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 0.9375rem;
+        border-top-right-radius: 0.9375rem;
+        margin-bottom: 10px;
+      }
+
+      .new-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $Green;
+        color: $Green-Font;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 7px 20px;
+        border-radius: 0.125rem;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        display: inline-block;
+      }
+
+      h2 {
+        font-size: 20px;
+        color: $Black;
+        margin-top: 5px;
+        margin-bottom: 1px;
+        padding-left: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        color: $Black;
+        margin-bottom: 20px;
+        margin-top: 5px;
+        padding-left: 20px;
+      }
+
+      .fa-heart {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        font-size: 24px;
+        color: $Black;
+        cursor: pointer;
+      }
+    }
+  }
