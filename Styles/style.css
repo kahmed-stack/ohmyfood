@@ -1,3 +1,5 @@
+/* Mixins */
+/* Base Values */
 body {
   margin: 0;
   padding: 0;
@@ -41,7 +43,7 @@ header img.logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .hero-section p {
   font-size: 1.125rem;
@@ -107,6 +109,9 @@ header img.logo {
   color: #7E7E7E;
   padding: 10px 20px 0px 20px;
 }
+.how-it-works-section .rectangle-container .fa-store::before {
+  color: #9356DC;
+}
 .how-it-works-section .rectangle-container p {
   font-size: 1rem;
   font-weight: bold;
@@ -129,7 +134,8 @@ header img.logo {
   padding: 20px;
 }
 .featured-section h1 {
-  font-size: 36px;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #000;
   margin-bottom: 30px;
 }
@@ -185,4 +191,31 @@ header img.logo {
   font-size: 24px;
   color: #000;
   cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.footer .footer-logo {
+  text-align: left;
+}
+.footer .footer-logo img {
+  width: 100px;
+  height: auto;
+  filter: invert(1);
+}
+.footer .footer-menu {
+  margin-top: 20px;
+  text-align: left;
+}
+.footer .footer-menu .menu-item {
+  display: block;
+  margin-bottom: 10px;
+}
+.footer .footer-menu .menu-item i {
+  margin-right: 5px;
 }/*# sourceMappingURL=style.css.map */
