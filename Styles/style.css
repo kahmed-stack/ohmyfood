@@ -37,7 +37,7 @@ header img.logo {
 .hero-section {
   background-color: #F6F6F6;
   text-align: center;
-  padding: 40px;
+  padding: 20px;
 }
 .hero-section h1 {
   font-size: 1.5rem;
@@ -54,7 +54,7 @@ header img.logo {
 .hero-section button {
   padding: 0.81rem 1.17rem;
   border-radius: 1.5625rem;
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: #fff;
   font-size: 1rem;
@@ -84,10 +84,11 @@ header img.logo {
   position: relative;
   background: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  padding: 20px;
+  padding: 10px;
   border-radius: 1.25rem;
   margin-bottom: 30px;
   display: flex;
+  cursor: pointer;
 }
 .how-it-works-section .rectangle-container::before {
   content: "";
@@ -149,6 +150,7 @@ header img.logo {
   margin-bottom: 20px;
   text-align: left;
   overflow: hidden;
+  cursor: pointer;
 }
 .featured-section .card img {
   width: 100%;
@@ -204,6 +206,7 @@ header img.logo {
   width: 100px;
   height: auto;
   filter: invert(1);
+  cursor: pointer;
 }
 .footer .footer-menu {
   margin-top: 20px;
@@ -212,6 +215,7 @@ header img.logo {
 .footer .footer-menu .menu-item {
   display: block;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .footer .footer-menu .menu-item i {
   margin-right: 5px;
@@ -268,12 +272,11 @@ main {
 /* Heart-Fill Animation */
 #heart-svg {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   right: 20px;
-  padding-top: 20px;
   cursor: pointer;
   overflow: visible;
-  width: 36px;
+  width: 60px;
 }
 
 .checkbox {
@@ -281,20 +284,86 @@ main {
 }
 
 .checkbox:checked + label svg #heart {
-  fill: #9356DC;
+  fill: #C968DB;
   animation: fillHeart 1.5s ease forwards;
 }
 
 @keyframes fillHeart {
   0% {
     fill: transparent;
-    transform: scale(1);
   }
-  50% {
-    fill: #9356DC;
+  33% {
+    fill: #C968DB;
+    stroke: none;
+  }
+  66% {
+    fill: #C968DB;
+    stroke: none;
   }
   100% {
-    fill: #9356DC;
-    transform: scale(1.2);
+    fill: #C968DB;
+    stroke: none;
+  }
+}
+/* Media Query for Desktop */
+@media screen and (min-width: 1440px) {
+  /* How it works section */
+  .how-it-works-section {
+    padding: 30px 195px;
+  }
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .rectangle-container {
+    width: 400px;
+    height: 50px;
+    margin: 0 20px;
+  }
+  .step-1 p,
+  .step-2 p {
+    padding-top: 3px;
+  }
+  .step-3 p {
+    position: relative;
+    top: -5px;
+  }
+  /* Restaurant cards */
+  .featured-section {
+    padding: 10px 195px;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card {
+    width: calc(50% - 40px);
+    margin-bottom: 20px;
+  }
+  /* Footer */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px 1px 625px;
+  }
+  .footer .footer-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  .footer .footer-menu ul .menu-item {
+    margin-right: 20px;
+  }
+  .footer .footer-menu ul .menu-item:last-child {
+    margin-right: 0;
+  }
+  .footer .footer-logo {
+    order: 2;
+  }
+  .footer .footer-logo img {
+    max-width: 100px;
   }
 }/*# sourceMappingURL=style.css.map */
