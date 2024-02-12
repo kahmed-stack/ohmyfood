@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/style.css">
     <title>ohmyfood Website</title>
 </head>
-
 <body>
+
+<main>
     <header>
         <img src="./Assests/images/logo/ohmyfood.png" alt="Logo" class="logo">
     </header>
@@ -22,80 +20,114 @@
         <span class="location-name">Islington, London</span>
     </div>
 
-    <div class="hero-section">
+    <section class="hero-section">
         <h1>Book the meal you want</h1>
         <p>Discover our carefully selected high-end restaurants</p>
         <button>Explore our restaurants</button>
-    </div>
+    </section>
 
-    <div class="how-it-works-section">
+    <section class="how-it-works-section">
         <h1>How it works</h1>
-        <div class="rectangle-container step-1">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-            <p>Choose a restaurant</p>
+        <div class="steps">
+            <div class="rectangle-container step-1">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p>Choose a restaurant</p>
+            </div>
+            <div class="rectangle-container step-2">
+                <i class="fa-solid fa-list-ul"></i>
+                <p>Build your meal</p>
+            </div>
+            <div class="rectangle-container step-3">
+                <i class="fa-solid fa-store"></i>
+                <p>Enjoy your meal at the restaurant</p>
+            </div>
         </div>
-        <div class="rectangle-container step-2">
-            <i class="fa-solid fa-list-ul"></i>
-            <p>Build your meal</p>
-        </div>
-        <div class="rectangle-container step-3">
-            <i class="fa-solid fa-store"></i>
-            <p>Enjoy your meal at the restaurant</p>
-        </div>
-    </div>
+    </section>
 
-    <div class="featured-section">
+    <section class="featured-section">
         <h1>Restaurants</h1>
-        <div class="card">
-            <img src="./Assests/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Card Image 1">
-            <div class="new-badge">New</div>
-            <h2>Kitchen West</h2>
-            <p>Angel</p>
-            <i class="fa-regular fa-heart"></i>
-        </div>
-        <div class="card">
-            <img src="./Assests/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Card Image 2">
-            <div class="new-badge">New</div>
-            <h2>Elderflower</h2>
-            <p>Old Street</p>
-            <i class="fas fa-heart" style="color: #9356DC;"></i>
-        </div>
-        <div class="card">
-            <img src="./Assests/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Card Image 3">
-            <h2>Shoreditch Canteen</h2>
-            <p>Shoreditch</p>
-            <i class="fa-regular fa-heart"></i>
-        </div>
-        <div class="card">
-            <img src="./Assests/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                alt="Card Image 4">
-            <h2>The Bay Leaf</h2>
-            <p>Hoxton</p>
-            <i class="fa-regular fa-heart"></i>
-        </div>
-    </div>
+        <article class="cards">
+            <div class="card">
+                <img src="./Assests/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Card Image 1">
+                <span class="new-badge">New</span>
+                <h2>Kitchen West</h2>
+                <p>Angel</p>
+                <input type="checkbox" class="checkbox" id="checkbox1" />
+                <label for="checkbox1">
+                <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                <path id="heart" d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" fill="#FFF" stroke="#000"/>
+                </g>
+                </svg>
+                </label>
+            </div>
+            <div class="card">
+                <img src="./Assests/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Card Image 2">
+                <span class="new-badge">New</span>
+                <h2>Elderflower</h2>
+                <p>Old Street</p>
+                <input type="checkbox" class="checkbox" id="checkbox2" />
+                <label for="checkbox2">
+                <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                <path id="heart" d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" fill="#FFF" stroke="#000"/>
+                </g>
+                </svg>
+                </label>
+            </div>
+            <div class="card">
+                <img src="./Assests/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Card Image 3">
+                <h2>Shoreditch Canteen</h2>
+                <p>Shoreditch</p>
+                <input type="checkbox" class="checkbox" id="checkbox3" />
+                <label for="checkbox3">
+                <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                <path id="heart" d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" fill="#FFF" stroke="#000"/>
+                </g>
+                </svg>
+                </label>
+            </div>
+            <div class="card">
+                <img src="./Assests/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Card Image 4">
+                <h2>The Bay Leaf</h2>
+                <p>Hoxton</p>
+                <input type="checkbox" class="checkbox" id="checkbox4" />
+                <label for="checkbox4">
+                <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                <path id="heart" d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" fill="#FFF" stroke="#000"/>
+                </g>
+                </svg>
+                </label>
+            </div>
+        </article>
+    </section>
 
     <footer class="footer">
         <div class="footer-logo">
             <img src="./Assests/images/logo/ohmyfood.png" alt="Logo">
         </div>
-        <div class="footer-menu">
-            <div class="menu-item">
-                <i class="fas fa-utensils"></i>
-                <span>Suggest a restaurant</span>
-            </div>
-            <div class="menu-item">
-                <i class="fa-solid fa-handshake-angle"></i>
-                <span>Become a partner</span>
-            </div>
-            <div class="menu-item">
-                <span>Legal notice</span>
-            </div>
-            <div class="menu-item">
-                <span>Contact</span>
-            </div>
-        </div>
+        <nav class="footer-menu">
+            <ul>
+                <li class="menu-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Suggest a restaurant</span>
+                </li>
+                <li class="menu-item">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <span>Become a partner</span>
+                </li>
+                <li class="menu-item">
+                    <span>Legal notice</span>
+                </li>
+                <li class="menu-item">
+                    <span>Contact</span>
+                </li>
+            </ul>
+        </nav>
     </footer>
+</main>
+<div class="loader"></div>
 </body>
-
 </html>

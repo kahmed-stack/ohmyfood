@@ -58,13 +58,15 @@ header img.logo {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: #fff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 550;
   border: none;
   cursor: pointer;
+  transition: transform 300ms ease-out;
 }
 .hero-section button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transform: translateY(-5px);
 }
 
 /* How it works Section */
@@ -184,14 +186,6 @@ header img.logo {
   margin-top: 5px;
   padding-left: 20px;
 }
-.featured-section .card .fa-heart {
-  position: absolute;
-  bottom: 30px;
-  right: 20px;
-  font-size: 24px;
-  color: #000;
-  cursor: pointer;
-}
 
 /* Footer */
 .footer {
@@ -199,6 +193,9 @@ header img.logo {
   color: #fff;
   padding: 20px;
   text-align: center;
+}
+.footer ul {
+  padding-left: 0;
 }
 .footer .footer-logo {
   text-align: left;
@@ -218,4 +215,86 @@ header img.logo {
 }
 .footer .footer-menu .menu-item i {
   margin-right: 5px;
+}
+
+/* Loader Animation */
+main {
+  animation: appear 3s linear;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #9356DC;
+  border-top-color: #FF79DA;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out 10, disappear 2s ease-in-out forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Heart-Fill Animation */
+#heart-svg {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  padding-top: 20px;
+  cursor: pointer;
+  overflow: visible;
+  width: 36px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + label svg #heart {
+  fill: #9356DC;
+  animation: fillHeart 1.5s ease forwards;
+}
+
+@keyframes fillHeart {
+  0% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  50% {
+    fill: #9356DC;
+  }
+  100% {
+    fill: #9356DC;
+    transform: scale(1.2);
+  }
 }/*# sourceMappingURL=style.css.map */
