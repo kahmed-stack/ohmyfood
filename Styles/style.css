@@ -66,7 +66,6 @@ header img.logo {
 .hero-section button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  transform: translateY(-5px);
 }
 
 /* How it works Section */
@@ -151,6 +150,9 @@ header img.logo {
   text-align: left;
   overflow: hidden;
   cursor: pointer;
+}
+.featured-section .card a {
+  text-decoration: none;
 }
 .featured-section .card img {
   width: 100%;
@@ -270,7 +272,7 @@ main {
   }
 }
 /* Heart-Fill Animation */
-#heart-svg {
+#heart-svg1, #heart-svg2, #heart-svg3, #heart-svg4 {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -283,7 +285,7 @@ main {
   display: none;
 }
 
-.checkbox:checked + label svg #heart {
+.checkbox:checked + label svg #heart1, .checkbox:checked + label svg #heart2, .checkbox:checked + label svg #heart3, .checkbox:checked + label svg #heart4 {
   fill: #C968DB;
   animation: fillHeart 1.5s ease forwards;
 }
@@ -347,7 +349,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px 1px 625px;
+    padding: 20px 80px 1px 650px;
   }
   .footer .footer-menu ul {
     display: flex;
@@ -365,5 +367,128 @@ main {
   }
   .footer .footer-logo img {
     max-width: 100px;
+  }
+}
+/* Restaurant Page */
+@media only screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  .container .go-back {
+    color: #000;
+    text-decoration: none;
+  }
+  .container .logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .header-image {
+    width: 100%;
+    height: 400px;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center 60%;
+       object-position: center 60%;
+  }
+  .restaurant-title {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .restaurant-title h1 {
+    margin-right: 150px;
+  }
+  .restaurant-title .fa-heart {
+    font-size: 26px;
+  }
+  .restaurant-menu {
+    text-align: center;
+    background-color: #F6F6F6;
+    padding: 10px 10px 37px 10px;
+    border-radius: 50px 50px 0 0;
+    margin-top: -40px;
+    position: relative;
+    z-index: 1;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .restaurant-menu h1 {
+    font-family: "Shrikhand";
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .restaurant-menu h1 i {
+    margin-left: 5px;
+  }
+  .restaurant-menu section {
+    margin: 40px 150px;
+    text-align: left;
+  }
+  .restaurant-menu section h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+  }
+  .restaurant-menu section .section-title {
+    border-bottom: 3px solid #99E2D0;
+    padding-bottom: 5px;
+    width: 45px;
+  }
+  .restaurant-menu section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .restaurant-menu section ul li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding: 1px 20px;
+    background-color: #fff;
+    border-radius: 15.04px;
+    padding: 10px 20px;
+    box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  }
+  .restaurant-menu section ul li h3 {
+    font-size: 18px;
+    font-weight: 550;
+    line-height: 21px;
+    letter-spacing: 0em;
+    margin: 5px 0;
+  }
+  .restaurant-menu section ul li p {
+    margin: 2px;
+  }
+  .restaurant-menu section ul li span {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }
+  .restaurant-menu .order-button {
+    border-radius: 1.5625rem;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 550;
+    border: none;
+    cursor: pointer;
+    transition: transform 300ms ease-out;
+    padding: 1rem 4.5rem;
+  }
+  .restaurant-menu .order-button:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   }
 }/*# sourceMappingURL=style.css.map */
