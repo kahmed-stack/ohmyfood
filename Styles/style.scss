@@ -315,6 +315,7 @@ main {
   0% {
     opacity: 0;
   }
+
   80% {
     opacity: 0;
   }
@@ -596,75 +597,75 @@ main {
 
   /* Slider Animation */
 
-  .checkbox {
-    display: none;
-  }
+.checkbox {
+  display: none;
+}
 
-  li .left {
-    width: 100%;
-    transition: 1s;
-    padding: 10px 15px;
-  }
+li .left {
+  width: 100%;
+  transition: 1s;
+  padding: 10px 15px;
+}
 
-  li .left:hover {
-    cursor: pointer;
-  }
+li .left:hover {
+  cursor: pointer;
+}
 
-  .left .plate-cont {
-    display: flex;
-    justify-content: space-between;
-  }
+.left .plate-cont {
+  display: flex;
+  justify-content: space-between;
+}
 
-  li .right {
-    width: 0;
-    background: $Green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 1s ease-in-out;
-    transform: translateX(4rem);
-    transition: 1s;
-  }
+li .right {
+  width: 0;
+  background: $Green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease-in-out;
+  transform: translateX(4rem);
+  transition: 1s;
+}
 
-  .fa-check-circle {
-    color: $White;
-    font-size: 200%;
-  }
+.fa-check-circle {
+  color: $White;
+  font-size: 200%;
+}
 
-  .checkbox:hover+label li .right {
-    width: 90px;
-    transform: translateX(0);
-  }
+.checkbox:hover+label li .right {
+  width: 90px;
+  transform: translateX(0);
+}
 
-  .checkbox:hover+label li .right .fa-check-circle {transform: rotate(1turn);
-     transition: 1s;
-  }
+.checkbox:hover+label li .right .fa-check-circle {transform: rotate(1turn);
+   transition: 1s;
+}
 
-   /* Menu loader animation */
-   .starters, .mains, .desserts {
-    opacity: 0;
-    animation: appear 1s forwards;
+ /* Menu loader animation */
+ .starters, .mains, .desserts {
+  opacity: 0;
+  animation: appear 1s forwards;
 }
 
 @keyframes appear {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .mains { animation-delay: 1s; }
 .desserts
-        .starters, .mains, .desserts {
-            opacity: 0;
-            animation: appear 1s forwards;
-        }
+      .starters, .mains, .desserts {
+          opacity: 0;
+          animation: appear 1s forwards;
+      }
 
-        @keyframes appear {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+      @keyframes appear {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+      }
 
-        .mains { animation-delay: 1s; }
-        .desserts { animation-delay: 1.5s; }
+      .mains { animation-delay: 1s; }
+      .desserts { animation-delay: 1.5s; }
 
 /* Media Queries for Mobile and Tablet Devices */
 @media only screen and (max-width: 768px) {
