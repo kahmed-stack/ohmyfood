@@ -424,6 +424,9 @@ main {
           &:last-child {
             margin-right: 0;
           }
+          a { color: $White;
+            text-decoration: none;
+          }
         }
       }
     }

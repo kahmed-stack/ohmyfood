@@ -358,6 +358,10 @@ main {
   .footer .footer-menu ul .menu-item:last-child {
     margin-right: 0;
   }
+  .footer .footer-menu ul .menu-item a {
+    color: #fff;
+    text-decoration: none;
+  }
   .footer .footer-logo {
     order: 2;
   }
