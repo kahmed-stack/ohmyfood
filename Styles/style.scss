@@ -339,7 +339,7 @@ main {
 
 .checkbox:checked + label svg #heart1, .checkbox:checked + label svg #heart2,.checkbox:checked + label svg #heart3,.checkbox:checked + label svg #heart4 {
   fill: $Gradient;
-  animation: fillHeart 1.5s ease forwards;
+  animation: fillHeart 0.5s ease forwards;
 }
 
 @keyframes fillHeart {
@@ -347,12 +347,7 @@ main {
     fill: transparent;
   }
 
-  33% {
-    fill: $Gradient;
-    stroke: none;
-  }
-
-  66% {
+  50% {
     fill: $Gradient;
     stroke: none;
   }
@@ -467,15 +462,13 @@ main {
 }
 
 .restaurant-title {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
+  display: inline-block;
   h1 {
-    margin-right: 150px;
+    margin-right: 100px;
+    display: inline-block;
   }
-  .fa-heart {
-    font-size: 26px;
-  }
+
 }
 
 .restaurant-menu {
@@ -498,10 +491,6 @@ main {
     line-height: 41px;
     letter-spacing: 0em;
     text-align: left;
-
-    i {
-      margin-left: 5px;
-    }
   }
 
   section {
@@ -527,13 +516,13 @@ main {
       padding: 0;
 
       li {
-        font-size: 1rem;
         margin-bottom: 15px;
-        padding: 1px 20px;
+        font-size: 1rem;
         background-color: $White;
         border-radius: 15.04px;
-        padding: 10px 20px;
         box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
+        display: flex;
+        overflow: hidden;
 
         h3 {
           font-size: 18px;
@@ -569,3 +558,231 @@ main {
   }
 }
  }
+
+  /* Heart-Fill Animation */
+
+  .restaurant-title input[type="checkbox"] {
+    display: none;
+  }
+
+  .restaurant-title input[type="checkbox"] + label {
+    cursor: pointer;
+    overflow: visible;
+    position: absolute;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .restaurant-title input[type="checkbox"]:checked + label svg #heart5 {
+    fill: $Gradient;
+    animation: fillHeart 0.5s ease forwards;
+  }
+
+  @keyframes fillHeart {
+    0% {
+      fill: transparent;
+    }
+
+    50% {
+      fill: $Gradient;
+      stroke: none;
+    }
+    100% {
+      fill: $Gradient;
+      stroke: none;
+    }
+  }
+
+  /* Slider Animation */
+
+  .checkbox {
+    display: none;
+  }
+
+  li .left {
+    width: 100%;
+    transition: 1s;
+    padding: 10px 15px;
+  }
+
+  li .left:hover {
+    cursor: pointer;
+  }
+
+  .left .plate-cont {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li .right {
+    width: 0;
+    background: $Green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+    transform: translateX(4rem);
+    transition: 1s;
+  }
+
+  .fa-check-circle {
+    color: $White;
+    font-size: 200%;
+  }
+
+  .checkbox:hover+label li .right {
+    width: 90px;
+    transform: translateX(0);
+  }
+
+  .checkbox:hover+label li .right .fa-check-circle {transform: rotate(1turn);
+     transition: 1s;
+  }
+
+   /* Menu loader animation */
+   .starters, .mains, .desserts {
+    opacity: 0;
+    animation: appear 1s forwards;
+}
+
+@keyframes appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.mains { animation-delay: 1s; }
+.desserts
+        .starters, .mains, .desserts {
+            opacity: 0;
+            animation: appear 1s forwards;
+        }
+
+        @keyframes appear {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .mains { animation-delay: 1s; }
+        .desserts { animation-delay: 1.5s; }
+
+/* Media Queries for Mobile and Tablet Devices */
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    .go-back {
+      color: $Black;
+      text-decoration: none;
+    }
+    .logo {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+  .header-image {
+    width: 100%;
+    height: 275px;
+    display: block;
+    object-fit: cover;
+    object-position: center 60%;
+  }
+
+  .restaurant-title {
+    position: relative;
+    display: inline-block;
+    margin-left: -40px;
+    h1 {
+      margin-right: 145px;
+      display: inline-block;
+    }
+  }
+
+  .restaurant-menu {
+    text-align: center;
+    background-color: $Background;
+    padding: 10px 10px 37px 10px;
+    border-radius: 50px 50px 0 0;
+    margin-top: -40px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    h1 {
+      font-family: 'Shrikhand';
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 41px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    section {
+      margin: 0px 15px 35px 15px;
+      text-align: left;
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 0em;
+      }
+
+      .section-title {
+        border-bottom: 3px solid $Green;
+        padding-bottom: 5px;
+        width: 45px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 15px;
+          font-size: 1rem;
+          background-color: $White;
+          border-radius: 15.04px;
+          box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
+          display: flex;
+          overflow: hidden;
+
+          h3 {
+            font-size: 18px;
+            font-weight: 550;
+            line-height: 21px;
+            letter-spacing: 0em;
+            margin: 5px 0;
+          }
+
+          p {
+            margin: 2px;
+          }
+
+          span {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 18px;
+            letter-spacing: 0em;
+          }
+        }
+      }
+    }
+
+    .order-button {
+      @include button-default;
+      padding: 1rem 4.5rem;
+
+      &:hover {
+        @include button-hover;
+      }
+    }
+  }
+}

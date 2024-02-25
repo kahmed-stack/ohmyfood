@@ -287,18 +287,14 @@ main {
 
 .checkbox:checked + label svg #heart1, .checkbox:checked + label svg #heart2, .checkbox:checked + label svg #heart3, .checkbox:checked + label svg #heart4 {
   fill: #C968DB;
-  animation: fillHeart 1.5s ease forwards;
+  animation: fillHeart 0.5s ease forwards;
 }
 
 @keyframes fillHeart {
   0% {
     fill: transparent;
   }
-  33% {
-    fill: #C968DB;
-    stroke: none;
-  }
-  66% {
+  50% {
     fill: #C968DB;
     stroke: none;
   }
@@ -394,15 +390,12 @@ main {
        object-position: center 60%;
   }
   .restaurant-title {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    display: inline-block;
   }
   .restaurant-title h1 {
-    margin-right: 150px;
-  }
-  .restaurant-title .fa-heart {
-    font-size: 26px;
+    margin-right: 100px;
+    display: inline-block;
   }
   .restaurant-menu {
     text-align: center;
@@ -425,9 +418,6 @@ main {
     letter-spacing: 0em;
     text-align: left;
   }
-  .restaurant-menu h1 i {
-    margin-left: 5px;
-  }
   .restaurant-menu section {
     margin: 40px 150px;
     text-align: left;
@@ -449,13 +439,249 @@ main {
     padding: 0;
   }
   .restaurant-menu section ul li {
-    font-size: 1rem;
     margin-bottom: 15px;
-    padding: 1px 20px;
+    font-size: 1rem;
     background-color: #fff;
     border-radius: 15.04px;
-    padding: 10px 20px;
     box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+    display: flex;
+    overflow: hidden;
+  }
+  .restaurant-menu section ul li h3 {
+    font-size: 18px;
+    font-weight: 550;
+    line-height: 21px;
+    letter-spacing: 0em;
+    margin: 5px 0;
+  }
+  .restaurant-menu section ul li p {
+    margin: 2px;
+  }
+  .restaurant-menu section ul li span {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }
+  .restaurant-menu .order-button {
+    border-radius: 1.5625rem;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 550;
+    border: none;
+    cursor: pointer;
+    transition: transform 300ms ease-out;
+    padding: 1rem 4.5rem;
+  }
+  .restaurant-menu .order-button:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+/* Heart-Fill Animation */
+.restaurant-title input[type=checkbox] {
+  display: none;
+}
+
+.restaurant-title input[type=checkbox] + label {
+  cursor: pointer;
+  overflow: visible;
+  position: absolute;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.restaurant-title input[type=checkbox]:checked + label svg #heart5 {
+  fill: #C968DB;
+  animation: fillHeart 0.5s ease forwards;
+}
+
+@keyframes fillHeart {
+  0% {
+    fill: transparent;
+  }
+  50% {
+    fill: #C968DB;
+    stroke: none;
+  }
+  100% {
+    fill: #C968DB;
+    stroke: none;
+  }
+}
+/* Slider Animation */
+.checkbox {
+  display: none;
+}
+
+li .left {
+  width: 100%;
+  transition: 1s;
+  padding: 10px 15px;
+}
+
+li .left:hover {
+  cursor: pointer;
+}
+
+.left .plate-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+li .right {
+  width: 0;
+  background: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease-in-out;
+  transform: translateX(4rem);
+  transition: 1s;
+}
+
+.fa-check-circle {
+  color: #fff;
+  font-size: 200%;
+}
+
+.checkbox:hover + label li .right {
+  width: 90px;
+  transform: translateX(0);
+}
+
+.checkbox:hover + label li .right .fa-check-circle {
+  transform: rotate(1turn);
+  transition: 1s;
+}
+
+/* Menu loader animation */
+.starters, .mains, .desserts {
+  opacity: 0;
+  animation: appear 1s forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.mains {
+  animation-delay: 1s;
+}
+
+.desserts .starters,
+.mains, .desserts {
+  opacity: 0;
+  animation: appear 1s forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.mains {
+  animation-delay: 1s;
+}
+
+.desserts {
+  animation-delay: 1.5s;
+}
+
+/* Media Queries for Mobile and Tablet Devices */
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  .container .go-back {
+    color: #000;
+    text-decoration: none;
+  }
+  .container .logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .header-image {
+    width: 100%;
+    height: 275px;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center 60%;
+       object-position: center 60%;
+  }
+  .restaurant-title {
+    position: relative;
+    display: inline-block;
+    margin-left: -40px;
+  }
+  .restaurant-title h1 {
+    margin-right: 145px;
+    display: inline-block;
+  }
+  .restaurant-menu {
+    text-align: center;
+    background-color: #F6F6F6;
+    padding: 10px 10px 37px 10px;
+    border-radius: 50px 50px 0 0;
+    margin-top: -40px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .restaurant-menu h1 {
+    font-family: "Shrikhand";
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .restaurant-menu section {
+    margin: 0px 15px 35px 15px;
+    text-align: left;
+  }
+  .restaurant-menu section h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+  }
+  .restaurant-menu section .section-title {
+    border-bottom: 3px solid #99E2D0;
+    padding-bottom: 5px;
+    width: 45px;
+  }
+  .restaurant-menu section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .restaurant-menu section ul li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background-color: #fff;
+    border-radius: 15.04px;
+    box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+    display: flex;
+    overflow: hidden;
   }
   .restaurant-menu section ul li h3 {
     font-size: 18px;
