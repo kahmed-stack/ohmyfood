@@ -374,6 +374,136 @@ main {
   }
 }
 /* Restaurant Page */
+.container {
+  display: flex;
+  align-items: center;
+}
+.container .go-back {
+  color: #000;
+  text-decoration: none;
+}
+.container .logo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.header-image {
+  width: 100%;
+  height: 275px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 60%;
+     object-position: center 60%;
+}
+
+.restaurant-title {
+  position: relative;
+  display: inline-block;
+  margin-left: -40px;
+}
+.restaurant-title h1 {
+  margin-right: 140px;
+  display: inline-block;
+}
+
+.SC-title {
+  position: relative;
+  display: inline-block;
+  margin-left: -30px;
+}
+.SC-title h1 {
+  margin-right: 50px;
+  display: inline-block;
+}
+
+.restaurant-menu {
+  text-align: center;
+  background-color: #F6F6F6;
+  padding: 10px 10px 37px 10px;
+  border-radius: 50px 50px 0 0;
+  margin-top: -40px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.restaurant-menu h1 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.restaurant-menu section {
+  margin: 0px 15px 35px 15px;
+  text-align: left;
+}
+.restaurant-menu section h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0em;
+}
+.restaurant-menu section .section-title {
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 5px;
+  width: 45px;
+}
+.restaurant-menu section ul {
+  list-style: none;
+  padding: 0;
+}
+.restaurant-menu section ul li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  background-color: #fff;
+  border-radius: 15.04px;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  display: flex;
+  overflow: hidden;
+}
+.restaurant-menu section ul li h3 {
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 21px;
+  letter-spacing: 0em;
+  margin: 5px 0;
+}
+.restaurant-menu section ul li p {
+  margin: 2px;
+}
+.restaurant-menu section ul li span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+.restaurant-menu .order-button {
+  border-radius: 1.5625rem;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 550;
+  border: none;
+  cursor: pointer;
+  transition: transform 300ms ease-out;
+  padding: 1rem 4.5rem;
+}
+.restaurant-menu .order-button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+/* Media Queries for Desktop */
 @media only screen and (min-width: 1024px) {
   .container {
     display: flex;
@@ -606,132 +736,4 @@ li .right {
 
 .desserts {
   animation-delay: 1.5s;
-}
-
-/* Media Queries for Mobile and Tablet Devices */
-@media only screen and (max-width: 768px) {
-  .container {
-    display: flex;
-    align-items: center;
-  }
-  .container .go-back {
-    color: #000;
-    text-decoration: none;
-  }
-  .container .logo {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-  .header-image {
-    width: 100%;
-    height: 275px;
-    display: block;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center 60%;
-       object-position: center 60%;
-  }
-  .restaurant-title {
-    position: relative;
-    display: inline-block;
-    margin-left: -40px;
-  }
-  .restaurant-title h1 {
-    margin-right: 140px;
-    display: inline-block;
-  }
-  .SC-title {
-    position: relative;
-    display: inline-block;
-    margin-left: -30px;
-  }
-  .SC-title h1 {
-    margin-right: 50px;
-    display: inline-block;
-  }
-  .restaurant-menu {
-    text-align: center;
-    background-color: #F6F6F6;
-    padding: 10px 10px 37px 10px;
-    border-radius: 50px 50px 0 0;
-    margin-top: -40px;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .restaurant-menu h1 {
-    font-family: "Shrikhand";
-    font-size: 28px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 41px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
-  .restaurant-menu section {
-    margin: 0px 15px 35px 15px;
-    text-align: left;
-  }
-  .restaurant-menu section h2 {
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 19px;
-    letter-spacing: 0em;
-  }
-  .restaurant-menu section .section-title {
-    border-bottom: 3px solid #99E2D0;
-    padding-bottom: 5px;
-    width: 45px;
-  }
-  .restaurant-menu section ul {
-    list-style: none;
-    padding: 0;
-  }
-  .restaurant-menu section ul li {
-    margin-bottom: 15px;
-    font-size: 1rem;
-    background-color: #fff;
-    border-radius: 15.04px;
-    box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
-    display: flex;
-    overflow: hidden;
-  }
-  .restaurant-menu section ul li h3 {
-    font-size: 18px;
-    font-weight: 550;
-    line-height: 21px;
-    letter-spacing: 0em;
-    margin: 5px 0;
-  }
-  .restaurant-menu section ul li p {
-    margin: 2px;
-  }
-  .restaurant-menu section ul li span {
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 18px;
-    letter-spacing: 0em;
-  }
-  .restaurant-menu .order-button {
-    border-radius: 1.5625rem;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 550;
-    border: none;
-    cursor: pointer;
-    transition: transform 300ms ease-out;
-    padding: 1rem 4.5rem;
-  }
-  .restaurant-menu .order-button:hover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  }
 }/*# sourceMappingURL=style.css.map */
