@@ -37,7 +37,7 @@ header img.logo {
 .hero-section {
   background-color: #F6F6F6;
   text-align: center;
-  padding: 20px;
+  padding: 5px 10px 35px 10px;
 }
 .hero-section h1 {
   font-size: 1.8rem;
@@ -230,15 +230,14 @@ header img.logo {
 }
 
 /* Loader Animation */
-main {
+.main-section {
   animation: appear 3s linear;
 }
 
 .loader {
   position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,12 +325,9 @@ main {
     margin: 0 20px;
   }
   .step-1 p,
-  .step-2 p {
-    padding-top: 3px;
-  }
+  .step-2 p,
   .step-3 p {
-    position: relative;
-    top: -5px;
+    padding-top: 3px;
   }
   /* Restaurant cards */
   .featured-section {
@@ -343,7 +339,7 @@ main {
     justify-content: space-between;
   }
   .card {
-    width: calc(50% - 40px);
+    width: calc(50% - 50px);
     margin-bottom: 20px;
   }
   /* Footer */
@@ -373,6 +369,12 @@ main {
   }
   .footer .footer-logo img {
     max-width: 100px;
+  }
+  /* Loader Animation */
+  .loader {
+    position: fixed;
+    top: 50%;
+    left: 48.75%;
   }
 }
 /* Restaurant Page */
