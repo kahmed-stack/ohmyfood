@@ -347,7 +347,7 @@ header img.logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px 1px 650px;
+    padding: 20px 80px 1px 775px;
   }
   .footer .footer-menu ul {
     display: flex;
@@ -692,12 +692,12 @@ li .right {
   font-size: 200%;
 }
 
-.checkbox:hover + label li .right {
+.plate:hover .right {
   width: 90px;
   transform: translateX(0);
 }
 
-.checkbox:hover + label li .right .fa-check-circle {
+.plate:hover .right .fa-check-circle {
   transform: rotate(1turn);
   transition: 1s;
 }
